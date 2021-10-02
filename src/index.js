@@ -9,8 +9,8 @@ app.use(express.json());
 let cors = require("cors");
 app.use(cors());
 
-app.use("/product", productController);
-app.use("/user", signupController);
+app.use("/products", productController);
+app.use("/users", signupController);
 
 const PORT = 3002;
 app.listen(PORT, async () => {

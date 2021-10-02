@@ -14,20 +14,6 @@ const productSchema = new mongoose.Schema(
         image: { type: [String], required: true },
         color: { type: [String], required: true },
     },
-
-    // {
-    //     id: { type: Number },
-    //     features: [],
-    //     name: { type: String },
-    //     category: { type: String },
-    //     rating: { type: Number },
-    //     reviews: { type: Number },
-    //     original_price: { type: Number },
-    //     discount: { type: Number },
-    //     isAvailable: { type: Boolean },
-    //     image: [],
-    //     color: [],
-    // },
     {
         versionKey: false,
     }
