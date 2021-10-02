@@ -1,10 +1,10 @@
 const express = require("express");
-const Product = require("../model/productModel");
+const Champion = require("../model/championModel");
 const router = express.Router();
 
 router.get("", async (req, res) => {
     try {
-        const product = await Product.find().lean().exec();
+        const product = await Champion.find().lean().exec();
         let data = [];
         for (let i = 0; i < product.length; i++) {
             data.push(product[i]);
@@ -16,7 +16,7 @@ router.get("", async (req, res) => {
 });
 router.delete("/:id", async (req, res) => {
     try {
-        const product = await Product.findByIdAndDelete(req.params.id);
+        const product = await Champion.findByIdAndDelete(req.params.id);
         return res.send(product);
     } catch (err) {
         return res.send(err.message);
