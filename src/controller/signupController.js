@@ -13,6 +13,15 @@ router.get("/", async (req, res) => {
     }
 })
 
+router.get("/:id", async (req, res) => {
+    try {
+        const x = await Signup.findById(req.params.id).lean().exec();
+        res.send(x);
+    } catch (err) {
+        res.status(400).send(err.message);
+    }
+})
+
 
 router.post("/", async (req, res) => {
     try {
@@ -22,5 +31,17 @@ router.post("/", async (req, res) => {
         res.status(400).send(err.message);
     }
 })
+
+router.patch("/", async (req, res) => {
+    try {
+        const updateValue = { cart: req.body.cart };
+    
+        const user = await Signup.findByIdAndUpdate(req.body._id, updateValue, {new:true});
+
+        return res.send(user);  
+    } catch (err) {
+        res.status(400).send(err.message);
+    }
+});
 
 module.exports = router;
