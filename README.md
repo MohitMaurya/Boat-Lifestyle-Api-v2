@@ -4,8 +4,7 @@
 1) ReactJS for the frontend
 2) NodeJS, Express And MongoDB for the backend
 
-#### Frontend for this project:  `https://github.com/SushanthPS/Boat-Lifestyle-Clone`
-
+#### Frontend for this project:  [Link](https://github.com/SushanthPS/Boat-Lifestyle-Clone)
 
 <br>
 
